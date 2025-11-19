@@ -1,0 +1,614 @@
+-<!DOCTYPE html>
+<html lang="es">
+
+<link rel="stylesheet" href="styles.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Trivia del Dovah - Foro de Skyrim</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Pantalla de Bienvenida -->
+        <div class="welcome-screen" id="welcomeScreen">
+            <h1>LA TRIVIA DEL DOVAH</h1>
+            
+            <div class="welcome-buttons">
+                <button class="welcome-btn login-welcome-btn" id="welcomeLoginBtn">Iniciar Sesión</button>
+                <button class="welcome-btn register-welcome-btn" id="welcomeRegisterBtn">Registrarse</button>
+            </div>
+        </div>
+        
+        <!-- Contenido Principal (oculto inicialmente) -->
+        <div class="main-content" id="mainContent">
+            <header>
+                <div class="logo">
+                    <h1>LA TRIVIA DEL DOVAH</h1>
+                </div>
+                
+                <div class="categories">
+                    <div class="category active" data-category="inicio">Inicio</div>
+                    <div class="category" data-category="armas">Armas</div>
+                    <div class="category" data-category="armaduras">Armaduras</div>
+                    <div class="category" data-category="hechizos">Hechizos</div>
+                    <div class="category" data-category="misiones">Misiones</div>
+                    <div class="category" data-category="personajes">Personajes</div>
+                    <div class="category" data-category="preguntas">Preguntas</div>
+                </div>
+            </header>
+            
+            <div class="divider"></div>
+            
+            <!-- Pagina de Inicio - Chat Libre -->
+            <div id="inicio" class="forum-content active">
+                <h2 class="forum-title">CHAT LIBRE - INTERACCIONES ENTRE USUARIOS</h2>
+                
+                <div class="chat-container">
+                    <div class="chat-message">
+                        <div class="chat-header">
+                            <div class="chat-avatar">DB</div>
+                            <div class="chat-user">Dragonborn</div>
+                            <div class="chat-time">Hace 5 minutos</div>
+                        </div>
+                        <div class="chat-content">
+                            ¡Hola a todos! ¿Alguien quiere unirse a una expedición a las Ruinas de Mzulft? Necesito ayuda con los Centuriones.
+                        </div>
+                    </div>
+                    
+                    <div class="chat-message">
+                        <div class="chat-header">
+                            <div class="chat-avatar">MG</div>
+                            <div class="chat-user">MagoGandalf</div>
+                            <div class="chat-time">Hace 3 minutos</div>
+                        </div>
+                        <div class="chat-content">
+                            ¡Yo me apunto! Tengo hechizos de destrucción nivel experto. ¿A qué hora quedamos?
+                        </div>
+                    </div>
+                    
+                    <div class="chat-message">
+                        <div class="chat-header">
+                            <div class="chat-avatar">LD</div>
+                            <div class="chat-user">LadronDivino</div>
+                            <div class="chat-time">Hace 2 minutos</div>
+                        </div>
+                        <div class="chat-content">
+                            Mzulft tiene buenos botines. Cuenten conmigo para abrir cerraduras y desactivar trampas.
+                        </div>
+                    </div>
+                    
+                    <div class="chat-message">
+                        <div class="chat-header">
+                            <div class="chat-avatar">CH</div>
+                            <div class="chat-user">CazadorHjalmarch</div>
+                            <div class="chat-time">Hace 1 minuto</div>
+                        </div>
+                        <div class="chat-content">
+                            ¿Alguien ha visto lobos albinos por la zona de Falkreath? Necesito sus pieles para una armadura.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="new-chat-message">
+                    <textarea class="chat-input" placeholder="Escribe tu mensaje para la comunidad..."></textarea>
+                    <button class="send-chat-btn">Enviar Mensaje</button>
+                </div>
+            </div>
+            
+            <!-- Foro de Armas -->
+            <div id="armas" class="forum-content">
+                <h2 class="forum-title">FORO DE DUDAS - ARMAS</h2>
+                
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-avatar">DB</div>
+                        <div class="post-info">
+                            <div class="nickname">Dragonborn</div>
+                            <div class="post-date">15 / 11 / 2023</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        ¿Cuál es el mejor arma a dos manos para un guerrero nórdico? Estoy entre la Hacha de Ysgramor y la Espada Élfica.
+                    </div>
+                </div>
+                
+                <div class="responses">
+                    <h3 class="responses-title">Respuestas</h3>
+                    
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="user-avatar">GH</div>
+                            <div class="post-info">
+                                <div class="nickname">GuerreroHjalmarch</div>
+                                <div class="post-date">16 / 11 / 2023</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            Definitivamente la Hacha de Ysgramor. El daño adicional a elfos es invaluable, especialmente si planeas luchar contra los Thalmor.
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="user-avatar">EH</div>
+                            <div class="post-info">
+                                <div class="nickname">ElHerrero</div>
+                                <div class="post-date">16 / 11 / 2023</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            Depende de tu estilo. La Espada Élfica es más rápida, pero la Hacha de Ysgramor tiene mejor daño por golpe.
+                        </div>
+                    </div>
+                    
+                    <div class="reply-section">
+                        <textarea class="reply-input" placeholder="Escribe tu respuesta..."></textarea>
+                        <button class="reply-btn">Responder</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Foro de Armaduras -->
+            <div id="armaduras" class="forum-content">
+                <h2 class="forum-title">FORO DE DUDAS - ARMADURAS</h2>
+                
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-avatar">GH</div>
+                        <div class="post-info">
+                            <div class="nickname">GuerreroHjalmarch</div>
+                            <div class="post-date">14 / 11 / 2023</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        ¿Qué armadura pesada ofrece mejor protección? ¿Armadura de Dragón o Armadura de Daedra?
+                    </div>
+                </div>
+                
+                <div class="responses">
+                    <h3 class="responses-title">Respuestas</h3>
+                    
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="user-avatar">HS</div>
+                            <div class="post-info">
+                                <div class="nickname">HerreroSkyrim</div>
+                                <div class="post-date">15 / 11 / 2023</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            La Armadura de Daedra tiene ligeramente mejor protección, pero la de Dragón se ve más imponente. Ambas son excelentes opciones.
+                        </div>
+                    </div>
+                    
+                    <div class="reply-section">
+                        <textarea class="reply-input" placeholder="Escribe tu respuesta..."></textarea>
+                        <button class="reply-btn">Responder</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Foro de Hechizos -->
+            <div id="hechizos" class="forum-content">
+                <h2 class="forum-title">FORO DE DUDAS - HECHIZOS</h2>
+                
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-avatar">MG</div>
+                        <div class="post-info">
+                            <div class="nickname">Mago</div>
+                            <div class="post-date">13 / 11 / 2023</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        ¿No sabes en qué escuela especializarte? Acá te ayudamos aprendiz.
+                    </div>
+                </div>
+                
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-avatar">MI</div>
+                        <div class="post-info">
+                            <div class="nickname">Magia de Ilusión</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        Escuela especializada en alterar la mente y confundir a tus enemigos y su percepción de la realidad.
+                    </div>
+                </div>
+                
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-avatar">MD</div>
+                        <div class="post-info">
+                            <div class="nickname">Magia de Destrucción</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        Escuela especializada en el combate con elementos como rayos, fuego y hielo.
+                    </div>
+                </div>
+                
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-avatar">MC</div>
+                        <div class="post-info">
+                            <div class="nickname">Magia de Conjuración</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        Escuela especializada en invocar criaturas y armas de otros planos de existencia.
+                    </div>
+                </div>
+                
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-avatar">MR</div>
+                        <div class="post-info">
+                            <div class="nickname">Magia de Restauración</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        Escuela especializada en la curación, protección y alejamiento de no muertos.
+                    </div>
+                </div>
+                
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-avatar">MA</div>
+                        <div class="post-info">
+                            <div class="nickname">Magia de Alteración</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        Escuela especializada en cambiar las propiedades del mundo físico y sus habitantes.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Foro de Misiones -->
+            <div id="misiones" class="forum-content">
+                <h2 class="forum-title">FORO DE DUDAS - MISIONES</h2>
+                
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-avatar">AV</div>
+                        <div class="post-info">
+                            <div class="nickname">Aventurero</div>
+                            <div class="post-date">16 / 11 / 2023</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        Estoy atascado en la misión "El grito del dragón". ¿Algún consejo sin spoilers?
+                    </div>
+                </div>
+                
+                <div class="responses">
+                    <h3 class="responses-title">Respuestas</h3>
+                    
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="user-avatar">EXP</div>
+                            <div class="post-info">
+                                <div class="nickname">Explorador</div>
+                                <div class="post-date">17 / 11 / 2023</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            Asegúrate de tener un buen arco y muchas flechas. Los gritos de dragón son útiles, pero el combate a distancia es tu mejor aliado.
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="user-avatar">VT</div>
+                            <div class="post-info">
+                                <div class="nickname">Veterano</div>
+                                <div class="post-date">17 / 11 / 2023</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            No subestimes el poder de los seguidores. Lleva a Lydia o a otro compañero contigo para distraer al dragón.
+                        </div>
+                    </div>
+                    
+                    <div class="reply-section">
+                        <textarea class="reply-input" placeholder="Escribe tu respuesta..."></textarea>
+                        <button class="reply-btn">Responder</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Foro de Personajes -->
+            <div id="personajes" class="forum-content">
+                <h2 class="forum-title">FORO DE DUDAS - PERSONAJES</h2>
+                
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-avatar">RP</div>
+                        <div class="post-info">
+                            <div class="nickname">Roleplayer</div>
+                            <div class="post-date">15 / 11 / 2023</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        ¿Cuál es el mejor compañero para un mago? Necesito alguien que no estorbe en combate mágico.
+                    </div>
+                </div>
+                
+                <div class="responses">
+                    <h3 class="responses-title">Respuestas</h3>
+                    
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="user-avatar">LM</div>
+                            <div class="post-info">
+                                <div class="nickname">LoreMaster</div>
+                                <div class="post-date">16 / 11 / 2023</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            J'zargo es excelente para magos. Es un hechicero khajiit que usa magia de destrucción y no puede morir, perfecto para complementar tus hechizos.
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="user-avatar">MG</div>
+                            <div class="post-info">
+                                <div class="nickname">MagoGandalf</div>
+                                <div class="post-date">16 / 11 / 2023</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            Serana también es buena opción. Usa magia de conjuración y destrucción, y tiene diálogos interesantes durante el DLC Dawnguard.
+                        </div>
+                    </div>
+                    
+                    <div class="reply-section">
+                        <textarea class="reply-input" placeholder="Escribe tu respuesta..."></textarea>
+                        <button class="reply-btn">Responder</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Foro de Preguntas -->
+            <div id="preguntas" class="forum-content">
+                <h2 class="forum-title">FORO DE DUDAS - PREGUNTAS GENERALES</h2>
+                
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-avatar">NJ</div>
+                        <div class="post-info">
+                            <div class="nickname">NuevoJugador</div>
+                            <div class="post-date">17 / 11 / 2023</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        Acabo de empezar Skyrim. ¿Algún consejo para un principiante? No quiero arruinar mi primera experiencia.
+                    </div>
+                </div>
+                
+                <div class="responses">
+                    <h3 class="responses-title">Respuestas</h3>
+                    
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="user-avatar">VT</div>
+                            <div class="post-info">
+                                <div class="nickname">Veterano</div>
+                                <div class="post-date">17 / 11 / 2023</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            Explora a tu ritmo, no te apresures con la historia principal. Guarda frecuentemente y prueba diferentes estilos de juego para encontrar el que más te guste.
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="user-avatar">EXP</div>
+                            <div class="post-info">
+                                <div class="nickname">Explorador</div>
+                                <div class="post-date">17 / 11 / 2023</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            No vendas todas las gemas y materiales de herrería al principio. Te servirán más adelante para mejorar equipo.
+                        </div>
+                    </div>
+                    
+                    <div class="reply-section">
+                        <textarea class="reply-input" placeholder="Escribe tu respuesta..."></textarea>
+                        <button class="reply-btn">Responder</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="auth-section">
+                <button class="auth-btn login-btn" id="mainLoginBtn">Iniciar Sesión</button>
+                <button class="auth-btn register-btn" id="mainRegisterBtn">Registrarse</button>
+            </div>
+            
+            <footer>
+                <div class="footer-logo">LA TRIVIA DEL DOVAH</div>
+                <div class="footer-links">
+                    <a href="#">Términos de Uso</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Contacto</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal de Inicio de Sesión -->
+<div class="modal" id="loginModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Iniciar Sesión</h3>
+            <button class="close-btn" id="closeLoginModal">&times;</button>
+        </div>
+        <form id="loginForm" action="login.php" method="POST">
+            <div class="form-group">
+                <label for="username">Usuario</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="form-submit">Entrar</button>
+        </form>
+    </div>
+</div>
+
+    <!-- Modal de Registro -->
+<div class="modal" id="registerModal">
+     <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Registrarse</h3>
+            <button class="close-btn" id="closeRegisterModal">&times;</button>
+        </div>
+        <form id="registerForm" action="registro.php" method="POST">
+         <form action="registro.php" method="post">
+                <div class="form-group">
+                    <label for="nombre">Usuario</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" name="contrasena" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar Contraseña</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="form-button">Registrarse</button>
+            </form>
+        </form>
+      </div>
+</div>
+
+    <script>
+        // Elementos principales
+        const welcomeScreen = document.getElementById('welcomeScreen');
+        const mainContent = document.getElementById('mainContent');
+        const loginModal = document.getElementById('loginModal');
+        const registerModal = document.getElementById('registerModal');
+        
+        // Botones de bienvenida
+        document.getElementById('welcomeLoginBtn').addEventListener('click', function() {
+            loginModal.style.display = 'flex';
+        });
+        
+        document.getElementById('welcomeRegisterBtn').addEventListener('click', function() {
+            registerModal.style.display = 'flex';
+        });
+        
+        // Botones principales
+        document.getElementById('mainLoginBtn').addEventListener('click', function() {
+            loginModal.style.display = 'flex';
+        });
+        
+        document.getElementById('mainRegisterBtn').addEventListener('click', function() {
+            registerModal.style.display = 'flex';
+        });
+        
+        // Cerrar modales
+        document.getElementById('closeLoginModal').addEventListener('click', function() {
+            loginModal.style.display = 'none';
+        });
+        
+        document.getElementById('closeRegisterModal').addEventListener('click', function() {
+            registerModal.style.display = 'none';
+        });
+        
+        // Cerrar modal al hacer clic fuera
+        window.addEventListener('click', function(event) {
+            if (event.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+            if (event.target === registerModal) {
+                registerModal.style.display = 'none';
+            }
+        });
+        
+        // Funcionalidad para cambiar entre categorías
+        const categories = document.querySelectorAll('.category');
+        const forumContents = document.querySelectorAll('.forum-content');
+        
+        categories.forEach(category => {
+            category.addEventListener('click', function() {
+                // Remover clase active de todas las categorías
+                categories.forEach(cat => cat.classList.remove('active'));
+                
+                // Añadir clase active a la categoría clickeada
+                this.classList.add('active');
+                
+                // Ocultar todos los foros
+                forumContents.forEach(forum => forum.classList.remove('active'));
+                
+                // Mostrar el foro correspondiente
+                const categoryId = this.getAttribute('data-category');
+                document.getElementById(categoryId).classList.add('active');
+            });
+        });
+        
+        // Envío de formularios
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Simulación de inicio de sesión exitoso
+        welcomeScreen.style.display = 'none';
+        mainContent.style.display = 'block';
+        loginModal.style.display = 'none';
+        alert('¡Bienvenido de vuelta, Dovahkiin!');
+        });
+        
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Simulación de registro exitoso
+            welcomeScreen.style.display = 'none';
+            mainContent.style.display = 'block';
+            registerModal.style.display = 'none';
+            alert('¡Registro completado! Bienvenido a La Trivia del Dovah.');
+        });
+        
+        // Funcionalidad para los botones de responder
+        const replyButtons = document.querySelectorAll('.reply-btn');
+        replyButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const replyInput = this.parentElement.querySelector('.reply-input');
+                const replyText = replyInput.value.trim();
+                
+                if (replyText) {
+                    alert('Respuesta enviada: ' + replyText);
+                    replyInput.value = '';
+                } else {
+                    alert('Por favor, escribe una respuesta antes de enviar.');
+                }
+            });
+        });
+        
+        // Funcionalidad para el chat libre
+        const sendChatBtn = document.querySelector('.send-chat-btn');
+        const chatInput = document.querySelector('.chat-input');
+        
+        sendChatBtn.addEventListener('click', function() {
+            const message = chatInput.value.trim();
+            
+            if (message) {
+                alert('Mensaje enviado al chat: ' + message);
+                chatInput.value = '';
+            } else {
+                alert('Por favor, escribe un mensaje antes de enviar.');
+            }
+        });
+    </script>
+</body>
+</html>
